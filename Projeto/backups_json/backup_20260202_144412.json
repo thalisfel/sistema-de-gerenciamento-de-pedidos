@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "data_backup": "2026-02-02T14:44:12.754583",
+    "versao": "1.0"
+  },
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "admin",
+      "tipo": "admin",
+      "data_cadastro": "2026-01-30 16:22:50",
+      "ativo": 1
+    },
+    {
+      "id": 39,
+      "usuario": "gerente",
+      "tipo": "gerente",
+      "data_cadastro": "2026-01-30 16:53:52",
+      "ativo": 1
+    },
+    {
+      "id": 172,
+      "usuario": "felipe",
+      "tipo": "admin",
+      "data_cadastro": "2026-01-31 01:10:39",
+      "ativo": 1
+    },
+    {
+      "id": 183,
+      "usuario": "testuser",
+      "tipo": "admin",
+      "data_cadastro": "2026-02-02 17:41:53",
+      "ativo": 1
+    },
+    {
+      "id": 184,
+      "usuario": "testuser2",
+      "tipo": "gerente",
+      "data_cadastro": "2026-02-02 17:41:53",
+      "ativo": 1
+    },
+    {
+      "id": 185,
+      "usuario": "novousuario",
+      "tipo": "gerente",
+      "data_cadastro": "2026-02-02 17:41:53",
+      "ativo": 1
+    },
+    {
+      "id": 192,
+      "usuario": "novousuario_d4abbe0b",
+      "tipo": "gerente",
+      "data_cadastro": "2026-02-02 17:44:10",
+      "ativo": 1
+    }
+  ],
+  "produtos": [],
+  "pedidos": [],
+  "historico_pedidos": [],
+  "lucros_diarios": []
+}

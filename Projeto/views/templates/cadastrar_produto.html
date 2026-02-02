@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍕</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cadastrar_produto.css') }}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>➕ Cadastrar Produto</h1>
+            <p class="subtitle">Adicione novos itens ao cardápio</p>
+        </header>
+
+        <div class="content">
+            <button class="back-button" onclick="window.location.href='/pedidos'">← Voltar para Gerenciamento</button>
+
+            <form id="form-cadastro">
+                <label for="nome">Nome do Produto:</label>
+                <input type="text" id="nome" placeholder="Ex: Pizza Margherita" required>
+
+                <label for="descricao">Descrição:</label>
+                <textarea id="descricao" placeholder="Descreva o produto..." rows="4" required></textarea>
+
+                <label for="preco">Preço (R$):</label>
+                <input type="number" id="preco" placeholder="0.00" step="0.01" required>
+
+                <button type="submit">Cadastrar Produto</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/cadastrar_produto.js') }}"></script>
+</body>
+</html>

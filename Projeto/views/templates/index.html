@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trattoria Bella Italia</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍕</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍕 Trattoria Bella Italia</h1>
+            <p class="subtitle">Autêntica culinária italiana desde 1985</p>
+        </header>
+
+        <!-- Lobby de Boas-Vindas -->
+        <div id="lobby" class="lobby">
+            <div class="welcome-message">
+                <h2>Benvenuti!</h2>
+                <p>Seja bem-vindo à nossa trattoria. Desfrute dos sabores da Itália autêntica.</p>
+            </div>
+
+            <button class="menu-button" onclick="window.location.href='/pagina_inicial'">
+                <div class="menu-icon">🍝</div>
+                <div class="menu-title">Entrar no Sistema</div>
+                <div class="menu-description">Acesse o cardápio e faça seu pedido</div>
+            </button>
+        </div>
+    </div>
+</body>
+</html>

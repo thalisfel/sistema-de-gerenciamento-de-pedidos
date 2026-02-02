@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Pedidos</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍕</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pedidos.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>📋 Gerenciamento de Pedidos</h1>
+                <p>Bem-vindo, <span id="nome-usuario">Admin</span>!</p>
+            </div>
+            <div class="user-info">
+                <button id="btn-cadastrar-produto" class="btn-logout" onclick="window.location.href='/cadastrar_produto'" style="background: #28a745;">
+                    ➕ Cadastrar
+                </button>
+                <button id="btn-gerenciar-produto" class="btn-logout" onclick="window.location.href='/gerenciar_produto'" style="background: #ffc107; color: #333;">
+                    ⚙️ Gerenciar
+                </button>
+                <button id="btn-cadastro-func" class="btn-logout" onclick="window.location.href='/cadastro_funcionarios'" style="display:none; background: #17a2b8;">
+                    👥 Funcionários
+                </button>
+                <button id="btn-resetar-ids" class="btn-logout" onclick="resetarContadores()" style="display:none; background: #ff9800; color: #333;">
+                    🔄 Resetar
+                </button>
+                <button class="btn-logout" onclick="logout()" style="background: #dc3545;">
+                    🚪 Sair
+                </button>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-pedidos">0</div>
+                    <div class="stat-label">Total de Pedidos</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="pedidos-pendentes">0</div>
+                    <div class="stat-label">Pendentes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="receita-total">R$ 0,00</div>
+                    <div class="stat-label">Receita Total</div>
+                </div>
+            </div>
+            
+            <!-- Container com duas colunas -->
+            <div class="pedidos-container">
+                <!-- Coluna 1: Pedidos Ativos -->
+                <div class="pedidos-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            🍽️ Pedidos Ativos
+                        </h2>
+                        <span class="section-count" id="count-ativos">0</span>
+                    </div>
+                    <div id="lista-pedidos"></div>
+                </div>
+                
+                <!-- Coluna 2: Histórico de Pedidos Entregues -->
+                <div class="pedidos-section">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            📜 Histórico (Entregues)
+                        </h2>
+                        <div class="header-controls">
+                            <span class="section-count" id="count-historico">0</span>
+                            <button class="btn-limpar-historico" onclick="limparHistorico()">
+                                🗑️ Limpar Histórico
+                            </button>
+                        </div>
+                    </div>
+                    <div id="lista-historico"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/pedidos.js') }}"></script>
+</body>
+</html>

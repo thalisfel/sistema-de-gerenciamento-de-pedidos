@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Produtos</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍕</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/gerenciar_produto.css') }}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚙️ Gerenciar Produtos</h1>
+            <p class="subtitle">Edite ou remova produtos do cardápio</p>
+        </header>
+
+        <div class="content">
+            <button class="back-button" onclick="window.location.href='/pedidos'">← Voltar para Gerenciamento</button>
+            <h2>📦 Produtos Cadastrados</h2>
+            <div id="lista-gerenciar"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Edição -->
+    <div id="modal-editar" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>✏️ Editar Produto</h2>
+                <span class="close" onclick="fecharModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="form-editar">
+                    <input type="hidden" id="edit-id">
+
+                    <label for="edit-nome">Nome do Produto:</label>
+                    <input type="text" id="edit-nome" required>
+
+                    <label for="edit-descricao">Descrição:</label>
+                    <textarea id="edit-descricao" rows="4" required></textarea>
+
+                    <label for="edit-preco">Preço (R$):</label>
+                    <input type="number" id="edit-preco" step="0.01" required>
+
+                    <div style="margin-top: 20px;">
+                        <button type="submit" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">💾 Salvar Alterações</button>
+                        <button type="button" class="btn-danger" onclick="fecharModal()">✖ Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/gerenciar_produto.js') }}"></script>
+</body>
+</html>

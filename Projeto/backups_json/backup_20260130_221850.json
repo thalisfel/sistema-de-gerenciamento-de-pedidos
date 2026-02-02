@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "data_backup": "2026-01-30T22:18:50.074993",
+    "versao": "1.0"
+  },
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "admin",
+      "tipo": "admin",
+      "data_cadastro": "2026-01-30 16:22:50",
+      "ativo": 1
+    },
+    {
+      "id": 39,
+      "usuario": "gerente",
+      "tipo": "gerente",
+      "data_cadastro": "2026-01-30 16:53:52",
+      "ativo": 1
+    },
+    {
+      "id": 172,
+      "usuario": "felipe",
+      "tipo": "admin",
+      "data_cadastro": "2026-01-31 01:10:39",
+      "ativo": 1
+    }
+  ],
+  "produtos": [
+    {
+      "id": 2,
+      "nome": "Hambúrguer",
+      "descricao": "Hambúrguer com batata frita",
+      "preco": 15.0,
+      "ativo": 1,
+      "data_cadastro": "2026-01-31 01:11:50"
+    },
+    {
+      "id": 3,
+      "nome": "Pizza Margherita",
+      "descricao": "Pizza com queijo e tomate",
+      "preco": 25.0,
+      "ativo": 1,
+      "data_cadastro": "2026-01-31 01:11:54"
+    },
+    {
+      "id": 4,
+      "nome": "Hambúrguer",
+      "descricao": "Hambúrguer com batata frita",
+      "preco": 15.0,
+      "ativo": 1,
+      "data_cadastro": "2026-01-31 01:11:54"
+    },
+    {
+      "id": 5,
+      "nome": "Pizza Margherita",
+      "descricao": "Molho de tomate, mussarela e manjericão",
+      "preco": 35.0,
+      "ativo": 1,
+      "data_cadastro": "2026-01-31 01:16:04"
+    }
+  ],
+  "pedidos": [],
+  "historico_pedidos": [
+    {
+      "id": 1,
+      "pedido_id": 1,
+      "itens_json": "[{\"produto_id\": 1, \"nome\": \"Pizza Margherita\", \"quantidade\": 2, \"preco\": 35.0}, {\"produto_id\": 5, \"nome\": \"Refrigerante 2L\", \"quantidade\": 1, \"preco\": 8.0}]",
+      "total": 78.0,
+      "status": "Entregue",
+      "data_pedido": "2026-01-30 22:16:47",
+      "data_entrega": "2026-01-30 22:17:51"
+    }
+  ],
+  "lucros_diarios": [
+    {
+      "id": 31,
+      "data": "2026-01-30",
+      "total_pedidos": 1,
+      "receita_total": 78.0,
+      "ticket_medio": 78.0,
+      "atualizado_em": "2026-01-31 01:17:51"
+    }
+  ]
+}

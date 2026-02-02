@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Online</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🍕</text></svg>">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ Cardápio Online</h1>
+            <p class="subtitle">Gerencie seu cardápio e pedidos facilmente</p>
+        </header>
+
+        <!-- Lobby Principal -->
+        <div id="lobby" class="lobby">
+            <button class="menu-button" onclick="mostrarSecao('cardapio')">
+                <div class="menu-icon">📋</div>
+                <div class="menu-title">Ver Cardápio</div>
+                <div class="menu-description">Visualize todos os produtos disponíveis</div>
+            </button>
+
+            <button class="menu-button" onclick="mostrarSecao('pedido')">
+                <div class="menu-icon">🛒</div>
+                <div class="menu-title">Fazer Pedido</div>
+                <div class="menu-description">Selecione produtos e faça seu pedido</div>
+            </button>
+        </div>
+
+        <!-- Seção: Ver Cardápio -->
+        <div id="secao-cardapio" class="section">
+            <button class="back-button" onclick="voltarLobby()">← Voltar ao Menu</button>
+            <h2>📋 Cardápio Completo</h2>
+            <div id="lista-cardapio"></div>
+        </div>
+
+        <!-- Seção: Fazer Pedido -->
+        <div id="secao-pedido" class="section">
+            <button class="back-button" onclick="voltarLobby()">← Voltar ao Menu</button>
+            <h2>🛒 Fazer Pedido</h2>
+            <div id="lista-produtos-pedido"></div>
+
+            <div class="pedido">
+                <h3>Seu Pedido:</h3>
+                <div id="itens-pedido">Nenhum item selecionado.</div>
+                <p class="total-pedido">Total: R$ <span id="total">0.00</span></p>
+                <button class="btn-success" onclick="finalizarPedido()">✓ Finalizar Pedido</button>
+                <button class="btn-danger" onclick="limparPedido()">🗑️ Limpar Pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
